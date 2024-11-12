@@ -1,0 +1,36 @@
+/3D_Chatbot_OpenAI
+   /3D_Rendering
+      /Models
+         /AssistantModel.obj  # 3D assistant model (OBJ/GLTF format)
+      /Textures
+         /SkinTexture.png
+         /ClothesTexture.png
+      /Animations
+         /LipSyncAnimation.js
+         /Gestures.js
+      /ThreeJS_Render
+         /index.html  # Renders the 3D model using Three.js
+         /app.js      # Handles interactions and rendering logic
+   /Chatbot_Backend
+      /OpenAI
+         /APIConfig.json  # Contains OpenAI API keys and configuration
+         /Chatbot.py  # Script for handling OpenAI API conversation requests
+   /System_Access
+      /Scripts
+         /SystemControl.py  # Python script to run system commands
+         /FileAccess.py     # Interacts with local file system
+   /Voice_Interface
+      /SpeechRecognition
+         /SpeechToText.py  # Uses OpenAI Whisper API or local STT for speech recognition
+      /TextToSpeech
+         /TextToSpeech.py  # Uses OpenAI TTS (if available) or pyttsx3 for local TTS
+   /UI
+      /App_UI
+         /index.html  # Main interface for interacting with the 3D assistant
+         /styles.css  # Styling for the UI
+         /app.js      # Handles user interaction with the chatbot
+   /Integration
+      /Chatbot_Integration.py  # Integrates OpenAI API with system access and 3D assistant
+   /Docs
+      /Setup.md  # Instructions for setting up the project
+      /Usage.md  # Instructions on how to interact with the chatbot
