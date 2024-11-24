@@ -29,7 +29,7 @@ def audio_callback(indata, frames, time, status):
     q.put(bytes(indata))
 
 # Hugging Face Endpoint
-HUGGING_FACE_TOKEN = "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"
+HUGGING_FACE_TOKEN = "hf_token"
 repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 llm = HuggingFaceEndpoint(
     repo_id=repo_id,
