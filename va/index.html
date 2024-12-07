@@ -9,9 +9,51 @@
             margin: 0;
             overflow: hidden;
             touch-action: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100vh;
         }
         canvas {
             display: block;
+            flex-grow: 1;
+        }
+        .chat-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 2;
+            width: 300px; /* Set fixed width for both prompt and response */
+        }
+        .chatbox {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            resize: none;
+            overflow: hidden;
+            white-space: pre-wrap; /* Wrap text */
+            word-wrap: break-word; /* Break long words to fit */
+        }
+        .response {
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+            text-align: left;
+            white-space: pre-wrap; /* Wrap text */
+            word-wrap: break-word; /* Break long words to fit */
         }
     </style>
 </head>
@@ -25,6 +67,15 @@
             }
         }
     </script>
+
+    <div class="chat-container">
+        <!-- Text input for the prompt -->
+        <textarea id="chatbox" class="chatbox" placeholder="Enter your prompt"></textarea>
+        <!-- Display the answer/response -->
+        <div id="response" class="response"></div>
+    </div>
+
     <script type="module" src="app.js"></script>
+
 </body>
 </html>
